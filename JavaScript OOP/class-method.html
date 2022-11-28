@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Class Method</title>
+</head>
+<body>
+<script>
+
+    class Person {
+        constructor(name) {
+            this.name = name;
+        }
+
+        sayHello(name) {
+            console.log(`Hello ${name} my name is ${this.name}`);
+        }
+    }
+
+    const dendi = new Person('Dendi');
+    console.log(dendi);
+    dendi.sayHello('Prayogo');
+
+    const hidayat = new Person('Hidayat');
+    console.log(hidayat);
+    hidayat.sayHello('Joko');
+
+</script>
+</body>
+</html>

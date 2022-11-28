@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prototype Inheritance</title>
+</head>
+<body>
+<script>
+
+    function Employee(name) {
+        this.name = name;
+    }
+
+    function Manager(name) {
+        this.name = name;
+    }
+
+    // Manager.prototype = Employee.prototype; // contoh inheritance yang salah
+    // contoh inheritance yang benar
+    Manager.prototype.sayHello = Object.create(Employee.prototype);
+
+    Manager.prototype.sayHello = function (name) {
+        console.log(`Hello ${name}, my name is Manager ${this.name}`);
+    }
+
+    Employee.prototype.sayHello = function (name) {
+        console.log(`Hello ${name}, my name is Employee ${this.name}`);
+    }
+
+    const employee = new Employee("Dendi");
+    employee.sayHello("Prayogo");
+
+    const manager = new Manager("Hidayat");
+    manager.sayHello("Joko");
+
+    console.log(employee);
+    console.log(manager);
+
+</script>
+</body>
+</html>

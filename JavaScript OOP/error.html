@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Error</title>
+</head>
+<body>
+<script>
+
+    class MathUtil {
+
+        static sum(...numbers) {
+
+            if (numbers.length === 0) {
+                throw new Error("Total parameter harus lebih dari 0");
+            }
+
+            let total = 0;
+            for (const number of numbers) {
+                total += number;
+            }
+            return total;
+        }
+    }
+
+    // Error
+    console.log(MathUtil.sum());
+    console.log("Dendi");
+
+    const result = MathUtil.sum(1, 2, 3, 4, 5);
+    console.log(result);
+
+</script>
+</body>
+</html>

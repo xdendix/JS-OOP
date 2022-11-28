@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Class : Private Method</title>
+</head>
+<body>
+<script>
+
+    class Person {
+
+        say(name) {
+            if (name) {
+                Person.#sayWithName(name);
+            } else {
+                Person.#sayWithoutName();
+            }
+        }
+
+        static #sayWithoutName() {
+            console.log("Hello");
+        }
+
+        static #sayWithName(name) {
+            console.log(`Hello ${name}`);
+        }
+    }
+
+    const dendi = new Person();
+    dendi.say("Prayogo");
+
+</script>
+</body>
+</html>

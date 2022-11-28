@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object</title>
+</head>
+<body>
+<script>
+    // contoh Constructor Function
+    function Person(firstName, lastName) {
+        // cara menambahkan properti
+        this.firstName = firstName; // contoh Parameter di Constructor Function
+        this.lastName = lastName;   // contoh Parameter di Constructor Function
+        // cara menambahkan method
+        this.sayHello = function (name) {
+            console.log(`Hello ${name}, my name is ${this.firstName} ${this.lastName}`);
+        }
+    }
+
+    const dendi = new Person("Dendi", "Prayogo");
+    // cara menambahkan method
+    dendi.sayHello("Joko");
+
+    const prayogo = new Person("Dendi", "Prayogo");
+    // cara menambahkan method
+    prayogo.sayHello("Budi");
+
+    console.log(dendi);
+    console.log(prayogo);
+
+</script>
+</body>
+</html>

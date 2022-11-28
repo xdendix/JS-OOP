@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Class : Private Field</title>
+</head>
+<body>
+<script>
+
+    class Counter {
+
+        #counter = 0; // contoh private field menggunakan tanda #
+
+        increment() {
+            this.#counter++;
+        }
+
+        decrement() {
+            this.#counter--;
+        }
+
+        get() {
+            return this.#counter;
+        }
+    }
+
+    const counter = new Counter();
+
+    counter.increment();
+    counter.increment();
+    counter.increment();
+    counter.increment();
+    counter.increment();
+
+    counter.decrement();
+    counter.decrement();
+    counter.decrement();
+
+    console.log(counter.get());
+
+    // contoh akses diluar private field (tidak merubah value private field)
+    counter.counter = 100;
+
+    console.log(counter);
+
+</script>
+</body>
+</html>

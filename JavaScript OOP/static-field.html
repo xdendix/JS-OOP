@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Static Field</title>
+</head>
+<body>
+<script>
+
+    class Configuration {
+        static name = "Belajar JavaScript OOP";
+        static version = "1.0";
+        static author = "Dendi Prayogo Hidayat";
+    }
+
+    const config = new Configuration();
+    console.log(config);
+
+    // bisa juga dengan seperti ini
+    Configuration.author = "Hidayat";
+
+    console.log(Configuration.name);
+    console.log(Configuration.version);
+    console.log(Configuration.author);
+
+
+</script>
+</body>
+</html>
